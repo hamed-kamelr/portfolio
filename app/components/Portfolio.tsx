@@ -3,81 +3,51 @@
 import { useEffect, useRef } from 'react'
 
 type Project = {
-  icon: string
   title: string
   description: string
   tags: string[]
-  status: string
-  statusColor: string
-  gradient: string
-  highlight?: string
   link?: string
   linkLabel?: string
 }
 
 const projects: Project[] = [
   {
-    icon: '🧠',
     title: "Alzheimer's AI Prediction Model",
     description:
-      'Deep learning model leveraging convolutional neural networks to classify Alzheimer\'s disease stages from MRI brain scans. Built as part of a USQ research thesis with production-level accuracy.',
-    tags: ['Python', 'TensorFlow', 'Keras', 'Computer Vision', 'Deep Learning', 'MRI Imaging'],
-    status: 'Published Research',
-    statusColor: 'text-[#d4a843] bg-[rgba(212,168,67,0.1)] border-[rgba(212,168,67,0.3)]',
-    gradient: 'from-[#d4a843] to-[#4f8ef7]',
-    highlight: '98% Accuracy',
+      'Deep learning model leveraging convolutional neural networks to classify Alzheimer\'s disease stages from MRI brain scans. Built as part of a USQ research thesis — achieved 98% accuracy.',
+    tags: ['Python', 'TensorFlow', 'Keras', 'Computer Vision', 'Deep Learning'],
   },
   {
-    icon: '🎙️',
     title: 'AI Voice Agent System',
     description:
-      'End-to-end voice agent powered by LLMs and RAG architecture. Integrates with external APIs and Webhooks to handle dynamic conversational flows for enterprise automation use cases.',
+      'End-to-end voice agent powered by LLMs and RAG architecture. Integrates with external APIs and Webhooks to handle dynamic conversational flows for enterprise automation.',
     tags: ['LLMs', 'RAG', 'Voice AI', 'APIs', 'Webhooks', 'Python'],
-    status: 'Live Project',
-    statusColor: 'text-[#4f8ef7] bg-[rgba(79,142,247,0.1)] border-[rgba(79,142,247,0.3)]',
-    gradient: 'from-[#4f8ef7] to-[#94a3b8]',
   },
   {
-    icon: '📊',
     title: 'Power BI Call Centre Dashboard',
     description:
-      'Interactive Power BI reporting suite tracking call centre KPIs — including AHT, FCR, SLA adherence and agent performance — with advanced DAX calculations and real-time drill-through.',
-    tags: ['Power BI', 'DAX', 'KPI Analysis', 'Data Modelling', 'Business Intelligence'],
-    status: 'Delivered',
-    statusColor: 'text-[#fb923c] bg-[rgba(251,146,60,0.1)] border-[rgba(251,146,60,0.3)]',
-    gradient: 'from-[#fb923c] to-[#d4a843]',
+      'Interactive Power BI reporting suite tracking call centre KPIs — including AHT, FCR, SLA adherence and agent performance — with advanced DAX calculations.',
+    tags: ['Power BI', 'DAX', 'KPI Analysis', 'Data Modelling'],
   },
   {
-    icon: '📄',
     title: 'DocChat — AI Document Assistant',
     description:
-      'RAG chatbot that answers questions about PDFs, CSVs, and images using hybrid search (vector + keyword). Built with Azure AI Search, GPT-4o, Document Intelligence, and Streamlit. Includes source citations and streaming responses.',
-    tags: ['Python', 'RAG', 'Azure OpenAI', 'GPT-4o', 'Azure AI Search', 'Streamlit'],
-    status: 'Live Demo',
-    statusColor: 'text-[#4f8ef7] bg-[rgba(79,142,247,0.1)] border-[rgba(79,142,247,0.3)]',
-    gradient: 'from-[#4f8ef7] to-[#1d4ed8]',
+      'RAG chatbot that answers questions about PDFs, CSVs, and images using hybrid search. Built with Azure AI Search, GPT-4o, Document Intelligence, and Streamlit.',
+    tags: ['Python', 'RAG', 'Azure OpenAI', 'GPT-4o', 'Streamlit'],
     link: 'https://huggingface.co/spaces/hamed-kamelrh/doc-chat',
     linkLabel: 'Live Demo',
   },
   {
-    icon: '🏢',
     title: 'Enterprise IT Infrastructure',
     description:
-      'Designed and maintained enterprise Microsoft 365 environments — including Azure AD, Intune MDM, Exchange Online, and SharePoint — for education and government sector clients.',
-    tags: ['Azure AD', 'Intune', 'Exchange Online', 'SharePoint', 'M365', 'IT Operations'],
-    status: 'Ongoing',
-    statusColor: 'text-[#60a5fa] bg-[rgba(96,165,250,0.1)] border-[rgba(96,165,250,0.3)]',
-    gradient: 'from-[#1d4ed8] to-[#4f8ef7]',
+      'Designed and maintained enterprise Microsoft 365 environments — including Azure AD, Intune MDM, Exchange Online, and SharePoint — for education and government.',
+    tags: ['Azure AD', 'Intune', 'Exchange Online', 'SharePoint', 'M365'],
   },
   {
-    icon: '📋',
     title: 'Kanban Board',
     description:
-      'Single-board drag-and-drop task manager built with Next.js 14, TypeScript, and Tailwind CSS. Features smooth DnD interactions, column management, and a clean productivity-focused UI.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'Drag & Drop'],
-    status: 'Open Source',
-    statusColor: 'text-[#94a3b8] bg-[rgba(148,163,184,0.1)] border-[rgba(148,163,184,0.3)]',
-    gradient: 'from-[#94a3b8] to-[#475569]',
+      'Single-board drag-and-drop task manager built with Next.js 14, TypeScript, and Tailwind CSS. Features smooth DnD interactions and a clean UI.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React'],
     link: 'https://github.com/hamed-kamelr/kanban',
     linkLabel: 'GitHub',
   },
@@ -101,85 +71,58 @@ export default function Portfolio() {
   }, [])
 
   return (
-    <section id="portfolio" ref={sectionRef} className="py-28 px-6 bg-[rgba(212,168,67,0.015)]">
-      <div className="max-w-7xl mx-auto">
+    <section id="portfolio" ref={sectionRef} className="py-28 px-6">
+      <div className="max-w-[900px] mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="section-label reveal inline-flex">
-            <span>◈</span> Portfolio
+            <span>◈</span> Projects
           </div>
           <h2 className="reveal font-heading font-bold text-4xl sm:text-5xl text-white mt-2 mb-4">
-            Featured <span className="gradient-text">Projects</span>
+            Featured <span className="gradient-text">Work</span>
           </h2>
-          <p className="reveal text-slate-400 max-w-xl mx-auto text-base">
+          <p className="reveal text-[#9a8fb8] max-w-xl mx-auto text-base">
             A selection of projects spanning AI research, data engineering, enterprise IT, and
             automation — each built to solve real problems.
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Vertical list of project cards */}
+        <div className="space-y-6">
           {projects.map((project, i) => (
             <div
               key={i}
-              className="reveal glass-card overflow-hidden group hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-350 flex flex-col"
+              className="reveal glass-card p-8 hover:-translate-y-1 transition-all duration-300"
               style={{ transitionDelay: `${i * 70}ms` }}
             >
-              {/* Gradient Header */}
-              <div
-                className={`bg-gradient-to-br ${project.gradient} p-6 flex items-start justify-between relative overflow-hidden`}
-              >
-                <div className="text-4xl z-10 relative">{project.icon}</div>
-                {project.highlight && (
-                  <div className="z-10 relative bg-black/30 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white border border-white/20">
-                    {project.highlight}
-                  </div>
-                )}
-                <div className="absolute inset-0 bg-[#060912] opacity-30" />
-                <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-[rgba(6,9,18,0.8)] to-transparent" />
-              </div>
+              <h3 className="font-heading font-bold text-white text-lg mb-3">
+                {project.title}
+              </h3>
+              <p className="text-[#c4b5d4] text-sm leading-relaxed mb-5">
+                {project.description}
+              </p>
 
-              {/* Body */}
-              <div className="p-6 flex flex-col flex-1">
-                {/* Status Badge */}
-                <span
-                  className={`self-start px-2.5 py-0.5 rounded-full text-xs font-semibold border mb-3 ${project.statusColor}`}
-                >
-                  {project.status}
-                </span>
+              <div className="flex flex-wrap items-center gap-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-3 py-1.5 rounded-full bg-white/[0.04] text-[#9a8fb8] border border-white/[0.08]"
+                  >
+                    {tag}
+                  </span>
+                ))}
 
-                <h3 className="font-heading font-bold text-white text-base mb-2 group-hover:text-[#4f8ef7] transition-colors duration-200">
-                  {project.title}
-                </h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-5 flex-1">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-1.5 mt-auto mb-4">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 border border-white/10"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Link */}
                 {project.link && (
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-xs font-semibold text-[#4f8ef7] hover:text-white transition-colors group/link"
+                    className="ml-auto flex items-center gap-1.5 text-xs font-semibold text-[#0d9488] hover:text-white transition-colors"
                   >
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     {project.linkLabel}
-                    <span className="opacity-0 group-hover/link:opacity-100 transition-opacity">↗</span>
                   </a>
                 )}
               </div>

@@ -18,7 +18,7 @@ const KB: Record<string, Intent> = {
   greeting: {
     patterns: ['hello', 'hi', 'hey', 'howdy', 'good morning', 'good afternoon', 'sup', 'greetings'],
     responses: [
-      "Hey there! 👋 I'm Hamed's AI assistant. Ask me anything about his experience, skills, projects, or how to get in touch!",
+      "Hey there! I'm Hamed's AI assistant. Ask me anything about his experience, skills, projects, or how to get in touch!",
       "Hello! I'm here to tell you all about Hamed Kamel Rahimi. What would you like to know?",
       "Hi! Great to meet you. I can tell you about Hamed's career, skills, projects — just ask away!",
     ],
@@ -26,7 +26,7 @@ const KB: Record<string, Intent> = {
   farewell: {
     patterns: ['bye', 'goodbye', 'see you', 'take care', 'later', 'ciao', 'farewell', 'thanks bye'],
     responses: [
-      "Thanks for stopping by! Feel free to reach out to Hamed directly at hamed.kamel35@gmail.com 🙌",
+      "Thanks for stopping by! Feel free to reach out to Hamed directly at hamed.kamel35@gmail.com",
       "Goodbye! Don't hesitate to connect with Hamed on LinkedIn: linkedin.com/in/hamedkamel",
       "See you! If you're interested in working with Hamed, drop him an email at hamed.kamel35@gmail.com",
     ],
@@ -67,7 +67,7 @@ const KB: Record<string, Intent> = {
       'expertise', 'proficient', 'know how to', 'technical skills', 'capabilities',
     ],
     responses: [
-      "Hamed's skills span four key areas:\n\n☁️ **Cloud & Infrastructure**: Azure AD, Intune, Exchange, SharePoint, M365, Azure AZ-900\n🤖 **AI & ML**: LLMs, RAG, Deep Learning, Computer Vision, Python, TensorFlow/Keras\n📊 **Data Analytics**: Power BI, DAX, Data Modeling, ETL Pipelines, Business Intelligence\n⚙️ **IT Operations**: IT Support, Agile/Scrum, Incident Management, Oracle Service Cloud",
+      "Hamed's skills span four key areas:\n\n**Cloud & Infrastructure**: Azure AD, Intune, Exchange, SharePoint, M365, Azure AZ-900\n**AI & ML**: LLMs, RAG, Deep Learning, Computer Vision, Python, TensorFlow/Keras\n**Data Analytics**: Power BI, DAX, Data Modeling, ETL Pipelines, Business Intelligence\n**IT Operations**: IT Support, Agile/Scrum, Incident Management, Oracle Service Cloud",
       "On the technical side, Hamed is strong in Microsoft Azure cloud (Azure AD, Intune, Exchange), AI/ML development (LLMs, RAG, deep learning with Python/TensorFlow), Power BI data analytics with DAX, and enterprise IT operations. He also holds Microsoft certifications in Power BI and Azure Fundamentals.",
     ],
   },
@@ -127,7 +127,7 @@ const KB: Record<string, Intent> = {
       'masters', 'mba', 'data science', 'academic', 'graduated', 'school',
     ],
     responses: [
-      "Hamed holds multiple postgraduate degrees:\n\n🎓 **MS Data Science** — University of Southern Queensland (2022–2024)\n📐 **Master's in Analytics** — Northeastern University (2021)\n🌐 **MBA, International Business** — Azad University / IAU (2014–2016)\n🗣️ **CELTA (ESL)** — ITI Istanbul (2017)\n\nHis MSc thesis on Alzheimer's AI prediction was published as academic research.",
+      "Hamed holds multiple postgraduate degrees:\n\n**MS Data Science** — University of Southern Queensland (2022–2024)\n**Master's in Analytics** — Northeastern University (2021)\n**MBA, International Business** — Azad University / IAU (2014–2016)\n**CELTA (ESL)** — ITI Istanbul (2017)\n\nHis MSc thesis on Alzheimer's AI prediction was published as academic research.",
       "Academically, Hamed has an MS in Data Science from USQ (where his deep-learning research achieved 98% accuracy), a Master's in Analytics from Northeastern University, and an MBA in International Business from Azad University. That combination of technical depth and business acumen is pretty rare!",
     ],
   },
@@ -137,7 +137,7 @@ const KB: Record<string, Intent> = {
       'microsoft certified', 'credential', 'badge',
     ],
     responses: [
-      "Hamed's certifications:\n\n📊 **Power BI Data Analyst Associate (PL-300)** — Microsoft\n☁️ **Azure Fundamentals (AZ-900)** — Microsoft\n📐 PL-300 Cert Prep: DAX Calculations — LinkedIn Learning\n🏗️ PL-300 Cert Prep: Power BI Data Modeling — LinkedIn Learning\n📈 Power BI Data Modeling with DAX — LinkedIn Learning",
+      "Hamed's certifications:\n\n**Power BI Data Analyst Associate (PL-300)** — Microsoft\n**Azure Fundamentals (AZ-900)** — Microsoft\nPL-300 Cert Prep: DAX Calculations — LinkedIn Learning\nPL-300 Cert Prep: Power BI Data Modeling — LinkedIn Learning\nPower BI Data Modeling with DAX — LinkedIn Learning",
       "On the certification front, Hamed is Microsoft certified in both Power BI (PL-300) and Azure Fundamentals (AZ-900), plus multiple Power BI specialisation courses covering DAX and data modeling. He keeps his skills sharp with continuous learning.",
     ],
   },
@@ -147,7 +147,7 @@ const KB: Record<string, Intent> = {
       'linkedin', 'message', 'available', 'opportunity', 'work together',
     ],
     responses: [
-      "You can reach Hamed directly:\n\n📧 **Email**: hamed.kamel35@gmail.com\n💼 **LinkedIn**: linkedin.com/in/hamedkamel\n📍 **Location**: Greater Brisbane Area, QLD, Australia\n\nHe loves connecting with new people — don't hesitate to reach out!",
+      "You can reach Hamed directly:\n\n**Email**: hamed.kamel35@gmail.com\n**LinkedIn**: linkedin.com/in/hamedkamel\n**Location**: Greater Brisbane Area, QLD, Australia\n\nHe loves connecting with new people — don't hesitate to reach out!",
       "Hamed is always open to interesting conversations and opportunities! Best ways to connect:\n\n• Email: hamed.kamel35@gmail.com\n• LinkedIn: linkedin.com/in/hamedkamel\n\nHe's based in Greater Brisbane and responds promptly.",
     ],
   },
@@ -195,7 +195,7 @@ const KB: Record<string, Intent> = {
       'showcase', 'what have you built',
     ],
     responses: [
-      "Hamed's key projects:\n\n🧠 **Alzheimer's AI Model** — 98% accuracy CNNs on MRI images (published research)\n🎙️ **AI Voice Agent** — RAG + LLMs + APIs + Webhooks for enterprise automation\n📊 **Power BI Dashboard** — real-time call centre KPIs with advanced DAX\n🔄 **Automated Data Pipeline** — ETL for large-scale data-driven insights\n🏢 **Enterprise IT Infrastructure** — M365, Intune, Azure AD at government scale",
+      "Hamed's key projects:\n\n**Alzheimer's AI Model** — 98% accuracy CNNs on MRI images (published research)\n**AI Voice Agent** — RAG + LLMs + APIs + Webhooks for enterprise automation\n**Power BI Dashboard** — real-time call centre KPIs with advanced DAX\n**Automated Data Pipeline** — ETL for large-scale data-driven insights\n**Enterprise IT Infrastructure** — M365, Intune, Azure AD at government scale",
       "Some highlights from Hamed's portfolio:\n• A deep-learning AI that predicts Alzheimer's stages from MRI scans (98% accuracy)\n• Enterprise voice agent using RAG + LLMs for automation\n• Power BI dashboards for call centre performance monitoring\n• Large-scale data pipelines for business intelligence\n• Government-grade Microsoft 365 infrastructure management",
     ],
   },
@@ -205,13 +205,13 @@ const KB: Record<string, Intent> = {
       'what should i ask', 'options', 'capabilities',
     ],
     responses: [
-      "I can answer questions about Hamed, such as:\n\n• 💼 Current role & career history\n• 🛠️ Skills & technologies\n• 🚀 Projects & portfolio\n• 🎓 Education & certifications\n• 📍 Location & availability\n• 📬 How to contact him\n\nJust ask in plain English!",
+      "I can answer questions about Hamed, such as:\n\n• Current role & career history\n• Skills & technologies\n• Projects & portfolio\n• Education & certifications\n• Location & availability\n• How to contact him\n\nJust ask in plain English!",
     ],
   },
   thanks: {
     patterns: ['thank', 'thanks', 'thank you', 'thx', 'cheers', 'appreciate', 'great', 'awesome', 'nice'],
     responses: [
-      "You're welcome! Let me know if you have any other questions about Hamed. 😊",
+      "You're welcome! Let me know if you have any other questions about Hamed.",
       "Happy to help! Feel free to ask anything else.",
       "Glad I could help! Is there anything else you'd like to know?",
     ],
@@ -221,7 +221,7 @@ const KB: Record<string, Intent> = {
 const FALLBACK_RESPONSES = [
   "I don't have specific information on that, but feel free to reach out to Hamed directly at hamed.kamel35@gmail.com — he'd love to chat!",
   "That's a bit outside what I know about Hamed. For more details, connect with him on LinkedIn at linkedin.com/in/hamedkamel.",
-  "I'm not sure about that one! Your best bet is to contact Hamed directly: hamed.kamel35@gmail.com 📧",
+  "I'm not sure about that one! Your best bet is to contact Hamed directly: hamed.kamel35@gmail.com",
 ]
 
 // ─── Matching Engine ──────────────────────────────────────────────────────────
@@ -352,30 +352,30 @@ export default function Chatbot() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
       {/* Chat Panel */}
       <div
-        className={`mb-4 w-[360px] sm:w-[400px] rounded-2xl overflow-hidden shadow-2xl border border-[rgba(79,142,247,0.2)] transition-all duration-300 origin-bottom-right ${
+        className={`mb-4 w-[360px] sm:w-[400px] rounded-2xl overflow-hidden shadow-2xl border border-[rgba(13,148,136,0.2)] transition-all duration-300 origin-bottom-right ${
           isOpen
             ? 'opacity-100 scale-100 pointer-events-auto'
             : 'opacity-0 scale-95 pointer-events-none'
         }`}
-        style={{ background: 'rgba(6, 9, 18, 0.97)', backdropFilter: 'blur(24px)' }}
+        style={{ background: 'rgba(14, 10, 26, 0.97)', backdropFilter: 'blur(24px)' }}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-[rgba(79,142,247,0.08)] to-[rgba(212,168,67,0.08)] border-b border-[rgba(79,142,247,0.12)] px-4 py-3 flex items-center justify-between">
+        <div className="bg-gradient-to-r from-[rgba(13,148,136,0.08)] to-[rgba(236,72,153,0.08)] border-b border-[rgba(13,148,136,0.12)] px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#4f8ef7] to-[#d4a843] flex items-center justify-center text-xs font-bold text-white font-heading">
+              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#0d9488] to-[#ec4899] flex items-center justify-center text-xs font-bold text-white font-heading">
                 HKR
               </div>
-              <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-[#94a3b8] border-2 border-[#060912]" />
+              <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-[#0d9488] border-2 border-[#0e0a1a]" />
             </div>
             <div>
               <div className="text-sm font-semibold text-white font-heading">Ask About Hamed</div>
-              <div className="text-xs text-slate-500">Local AI · No API key needed</div>
+              <div className="text-xs text-[#7a6f96]">Local AI · No API key needed</div>
             </div>
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 hover:text-white hover:bg-white/5 transition-all"
+            className="w-8 h-8 rounded-lg flex items-center justify-center text-[#7a6f96] hover:text-white hover:bg-white/5 transition-all"
             aria-label="Close chat"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -390,13 +390,13 @@ export default function Chatbot() {
           {messages.length === 0 && (
             <div className="space-y-4">
               <div className="flex gap-2.5 items-start">
-                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#4f8ef7] to-[#d4a843] flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5">
+                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#0d9488] to-[#ec4899] flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5">
                   AI
                 </div>
                 <div className="bg-white/[0.05] rounded-2xl rounded-tl-sm px-3.5 py-2.5 max-w-[85%]">
-                  <p className="text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm text-[#c4b5d4] leading-relaxed">
                     Hi! I&apos;m Hamed&apos;s AI assistant. Ask me anything about his
-                    experience, skills, projects, or how to get in touch. 👋
+                    experience, skills, projects, or how to get in touch.
                   </p>
                 </div>
               </div>
@@ -405,7 +405,7 @@ export default function Chatbot() {
                   <button
                     key={s}
                     onClick={() => sendMessage(s)}
-                    className="text-xs px-3 py-1.5 rounded-full border border-[rgba(79,142,247,0.2)] text-[#4f8ef7] bg-[rgba(79,142,247,0.05)] hover:bg-[rgba(79,142,247,0.12)] hover:border-[rgba(79,142,247,0.4)] transition-all"
+                    className="text-xs px-3 py-1.5 rounded-full border border-[rgba(13,148,136,0.2)] text-[#0d9488] bg-[rgba(13,148,136,0.05)] hover:bg-[rgba(13,148,136,0.12)] hover:border-[rgba(13,148,136,0.4)] transition-all"
                   >
                     {s}
                   </button>
@@ -421,15 +421,15 @@ export default function Chatbot() {
               className={`flex gap-2.5 items-start ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}
             >
               {msg.role === 'assistant' && (
-                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#4f8ef7] to-[#d4a843] flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5">
+                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#0d9488] to-[#ec4899] flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5">
                   AI
                 </div>
               )}
               <div
                 className={`rounded-2xl px-3.5 py-2.5 max-w-[82%] text-sm leading-relaxed whitespace-pre-line ${
                   msg.role === 'user'
-                    ? 'bg-gradient-to-br from-[#4f8ef7] to-[#d4a843] text-white rounded-tr-sm'
-                    : 'bg-white/[0.05] text-slate-300 rounded-tl-sm'
+                    ? 'bg-gradient-to-br from-[#0d9488] to-[#ec4899] text-white rounded-tr-sm'
+                    : 'bg-white/[0.05] text-[#c4b5d4] rounded-tl-sm'
                 }`}
               >
                 {msg.content}
@@ -440,7 +440,7 @@ export default function Chatbot() {
           {/* Typing indicator */}
           {isTyping && (
             <div className="flex gap-2.5 items-start">
-              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#4f8ef7] to-[#d4a843] flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5">
+              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#0d9488] to-[#ec4899] flex items-center justify-center text-[10px] font-bold text-white shrink-0 mt-0.5">
                 AI
               </div>
               <div className="bg-white/[0.05] rounded-2xl rounded-tl-sm px-3.5 py-3">
@@ -448,7 +448,7 @@ export default function Chatbot() {
                   {[0, 150, 300].map((delay) => (
                     <span
                       key={delay}
-                      className="w-2 h-2 rounded-full bg-slate-500 animate-bounce"
+                      className="w-2 h-2 rounded-full bg-[#7a6f96] animate-bounce"
                       style={{ animationDelay: `${delay}ms` }}
                     />
                   ))}
@@ -461,8 +461,8 @@ export default function Chatbot() {
         </div>
 
         {/* Input */}
-        <div className="border-t border-[rgba(79,142,247,0.08)] px-3 py-3">
-          <div className="flex gap-2 items-end bg-white/[0.04] border border-[rgba(79,142,247,0.12)] rounded-xl px-3 py-2 focus-within:border-[rgba(79,142,247,0.35)] transition-colors">
+        <div className="border-t border-[rgba(13,148,136,0.08)] px-3 py-3">
+          <div className="flex gap-2 items-end bg-white/[0.04] border border-[rgba(13,148,136,0.12)] rounded-xl px-3 py-2 focus-within:border-[rgba(13,148,136,0.35)] transition-colors">
             <textarea
               ref={inputRef}
               value={input}
@@ -471,13 +471,13 @@ export default function Chatbot() {
               placeholder="Ask anything about Hamed..."
               rows={1}
               disabled={isTyping}
-              className="flex-1 bg-transparent text-sm text-white placeholder-slate-600 resize-none focus:outline-none leading-relaxed py-0.5 disabled:opacity-50"
+              className="flex-1 bg-transparent text-sm text-white placeholder-[#5a5075] resize-none focus:outline-none leading-relaxed py-0.5 disabled:opacity-50"
               style={{ maxHeight: '100px' }}
             />
             <button
               onClick={() => sendMessage()}
               disabled={!input.trim() || isTyping}
-              className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4f8ef7] to-[#d4a843] flex items-center justify-center shrink-0 hover:opacity-90 active:scale-95 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0d9488] to-[#ec4899] flex items-center justify-center shrink-0 hover:opacity-90 active:scale-95 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
               aria-label="Send message"
             >
               <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -485,7 +485,7 @@ export default function Chatbot() {
               </svg>
             </button>
           </div>
-          <p className="text-[10px] text-slate-700 text-center mt-2">
+          <p className="text-[10px] text-[#5a5075] text-center mt-2">
             Enter to send · Shift+Enter for new line
           </p>
         </div>
@@ -498,16 +498,16 @@ export default function Chatbot() {
           <div
             className="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold text-white whitespace-nowrap select-none pointer-events-none"
             style={{
-              background: 'rgba(6,9,18,0.92)',
-              border: '1px solid rgba(79,142,247,0.35)',
+              background: 'rgba(14,10,26,0.92)',
+              border: '1px solid rgba(13,148,136,0.35)',
               backdropFilter: 'blur(12px)',
-              boxShadow: '0 0 18px rgba(79,142,247,0.15)',
+              boxShadow: '0 0 18px rgba(13,148,136,0.15)',
               animation: 'fadeSlideIn 0.4s ease-out',
             }}
           >
             <span
-              className="w-2 h-2 rounded-full bg-[#94a3b8] shrink-0"
-              style={{ boxShadow: '0 0 6px #94a3b8', animation: 'pulse 2s ease-in-out infinite' }}
+              className="w-2 h-2 rounded-full bg-[#0d9488] shrink-0"
+              style={{ boxShadow: '0 0 6px #0d9488', animation: 'pulse 2s ease-in-out infinite' }}
             />
             Ask me anything
           </div>
@@ -524,7 +524,7 @@ export default function Chatbot() {
             <span
               className="absolute inset-0 rounded-full"
               style={{
-                background: 'rgba(79,142,247,0.2)',
+                background: 'rgba(13,148,136,0.2)',
                 animation: 'ping 2s cubic-bezier(0,0,0.2,1) infinite',
               }}
             />
@@ -534,10 +534,10 @@ export default function Chatbot() {
           <span
             className="absolute inset-0 rounded-full flex items-center justify-center"
             style={{
-              background: 'linear-gradient(135deg, #4f8ef7 0%, #d4a843 100%)',
+              background: 'linear-gradient(135deg, #0d9488 0%, #ec4899 100%)',
               boxShadow: isOpen
-                ? '0 0 20px rgba(212,168,67,0.5), 0 4px 15px rgba(0,0,0,0.5)'
-                : '0 0 30px rgba(79,142,247,0.5), 0 0 60px rgba(79,142,247,0.2), 0 4px 20px rgba(0,0,0,0.5)',
+                ? '0 0 20px rgba(236,72,153,0.5), 0 4px 15px rgba(0,0,0,0.5)'
+                : '0 0 30px rgba(13,148,136,0.5), 0 0 60px rgba(13,148,136,0.2), 0 4px 20px rgba(0,0,0,0.5)',
             }}
           >
             {/* Close icon */}
@@ -569,7 +569,7 @@ export default function Chatbot() {
 
           {/* Unread dot */}
           {hasUnread && !isOpen && (
-            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#4f8ef7] border-2 border-[#060912] animate-pulse z-10" />
+            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#0d9488] border-2 border-[#0e0a1a] animate-pulse z-10" />
           )}
         </button>
       </div>

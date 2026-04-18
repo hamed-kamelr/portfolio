@@ -9,8 +9,6 @@ type TimelineItem = {
   location: string
   bullets: string[]
   tags: string[]
-  color: 'cyan' | 'purple' | 'green'
-  current?: boolean
 }
 
 const experiences: TimelineItem[] = [
@@ -25,8 +23,6 @@ const experiences: TimelineItem[] = [
       'Driving service improvement initiatives within Agile delivery frameworks',
     ],
     tags: ['Intune', 'Azure AD', 'M365', 'Agile'],
-    color: 'cyan',
-    current: true,
   },
   {
     company: 'Tech Mahindra',
@@ -39,7 +35,6 @@ const experiences: TimelineItem[] = [
       'Collaborated with cross-functional teams to ensure on-time delivery',
     ],
     tags: ['Solution Design', 'APIs', 'Cloud', 'Enterprise IT'],
-    color: 'purple',
   },
   {
     company: 'University of Southern Queensland',
@@ -52,20 +47,6 @@ const experiences: TimelineItem[] = [
       'Supported identity management and access provisioning across university systems',
     ],
     tags: ['Azure AD', 'SharePoint', 'Oracle Service Cloud', 'O365'],
-    color: 'cyan',
-  },
-  {
-    company: 'University of Southern Queensland',
-    role: 'Student Success Advisor',
-    period: 'Jan 2023 – Dec 2023',
-    location: 'Brisbane, QLD',
-    bullets: [
-      'Provided academic advising and student success coaching to enrolled students',
-      'Developed support frameworks to improve retention and academic outcomes',
-      'Coordinated with academic and administrative teams on student progression',
-    ],
-    tags: ['Student Services', 'Academic Advising', 'Communication'],
-    color: 'green',
   },
   {
     company: 'University of Southern Queensland',
@@ -78,7 +59,18 @@ const experiences: TimelineItem[] = [
       'Achieved 98% classification accuracy — published as academic research',
     ],
     tags: ['Deep Learning', 'Computer Vision', 'Python', 'TensorFlow'],
-    color: 'purple',
+  },
+  {
+    company: 'University of Southern Queensland',
+    role: 'Student Success Advisor',
+    period: 'Jan 2023 – Dec 2023',
+    location: 'Brisbane, QLD',
+    bullets: [
+      'Provided academic advising and student success coaching to enrolled students',
+      'Developed support frameworks to improve retention and academic outcomes',
+      'Coordinated with academic and administrative teams on student progression',
+    ],
+    tags: ['Student Services', 'Academic Advising', 'Communication'],
   },
   {
     company: 'Taban Infrastructure Co.',
@@ -91,30 +83,8 @@ const experiences: TimelineItem[] = [
       'Supported business development activities across target verticals',
     ],
     tags: ['Business Development', 'KPI Research', 'Reporting'],
-    color: 'purple',
   },
 ]
-
-const colorMap = {
-  cyan: {
-    dot: 'bg-[#4f8ef7] shadow-[0_0_12px_rgba(79,142,247,0.6)]',
-    border: 'border-[rgba(79,142,247,0.25)]',
-    badge: 'bg-[rgba(79,142,247,0.1)] text-[#4f8ef7] border-[rgba(79,142,247,0.3)]',
-    tag: 'bg-[rgba(79,142,247,0.06)] text-[#4f8ef7] border-[rgba(79,142,247,0.2)]',
-  },
-  purple: {
-    dot: 'bg-[#d4a843] shadow-[0_0_12px_rgba(212,168,67,0.6)]',
-    border: 'border-[rgba(212,168,67,0.25)]',
-    badge: 'bg-[rgba(212,168,67,0.1)] text-[#d4a843] border-[rgba(212,168,67,0.3)]',
-    tag: 'bg-[rgba(212,168,67,0.06)] text-[#d4a843] border-[rgba(212,168,67,0.2)]',
-  },
-  green: {
-    dot: 'bg-[#94a3b8] shadow-[0_0_12px_rgba(148,163,184,0.6)]',
-    border: 'border-[rgba(148,163,184,0.25)]',
-    badge: 'bg-[rgba(148,163,184,0.1)] text-[#94a3b8] border-[rgba(148,163,184,0.3)]',
-    tag: 'bg-[rgba(148,163,184,0.06)] text-[#94a3b8] border-[rgba(148,163,184,0.2)]',
-  },
-}
 
 export default function Timeline() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -135,7 +105,7 @@ export default function Timeline() {
 
   return (
     <section id="journey" ref={sectionRef} className="py-28 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[900px] mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
           <div className="section-label reveal inline-flex">
@@ -144,109 +114,60 @@ export default function Timeline() {
           <h2 className="reveal font-heading font-bold text-4xl sm:text-5xl text-white mt-2 mb-4">
             Professional <span className="gradient-text">Journey</span>
           </h2>
-          <p className="reveal text-slate-400 max-w-xl mx-auto text-base">
+          <p className="reveal text-[#9a8fb8] max-w-xl mx-auto text-base">
             A career spanning enterprise IT, applied AI research, and data analytics across government,
             tech, and academia.
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Center line - desktop only */}
-          <div className="hidden lg:block timeline-line" />
+        {/* Timeline - Left aligned vertical */}
+        <div className="relative pl-8">
+          {/* Vertical gradient line */}
+          <div className="absolute left-[7px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#0d9488] via-[#ec4899] to-[#7c3aed]" />
 
-          {/* Mobile left line */}
-          <div className="lg:hidden absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-[#4f8ef7] via-[#d4a843] to-[#94a3b8]" />
+          <div className="space-y-10">
+            {experiences.map((exp, i) => (
+              <div
+                key={i}
+                className="reveal relative"
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                {/* Timeline Dot */}
+                <div className="absolute -left-8 top-6 w-[14px] h-[14px] rounded-full bg-[#0d9488] ring-4 ring-[#0e0a1a] shadow-[0_0_12px_rgba(13,148,136,0.6)]" />
 
-          <div className="space-y-12">
-            {experiences.map((exp, i) => {
-              const c = colorMap[exp.color]
-              const isLeft = i % 2 === 0
-              return (
-                <div
-                  key={i}
-                  className={`reveal relative flex flex-col lg:flex-row ${
-                    isLeft ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                  } items-start lg:items-center gap-6 lg:gap-0`}
-                  style={{ transitionDelay: `${i * 80}ms` }}
-                >
-                  {/* Card */}
-                  <div
-                    className={`w-full lg:w-[calc(50%-2.5rem)] ml-10 lg:ml-0 ${
-                      isLeft ? 'lg:pr-10' : 'lg:pl-10'
-                    }`}
-                  >
-                    <div
-                      className={`glass-card p-6 border ${c.border} hover:-translate-y-1 hover:border-opacity-60 transition-all duration-300`}
-                    >
-                      {/* Top Row */}
-                      <div className="flex flex-wrap items-start gap-2 mb-3">
-                        {exp.current && (
-                          <span
-                            className={`px-2.5 py-0.5 rounded-full text-xs font-bold border ${c.badge} flex items-center gap-1.5`}
-                          >
-                            <span className="relative flex h-1.5 w-1.5">
-                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-current opacity-75" />
-                              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-current" />
-                            </span>
-                            Current Role
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="font-heading font-bold text-white text-lg mb-1">{exp.role}</h3>
-                      <p className="text-[#4f8ef7] font-semibold text-sm mb-1">{exp.company}</p>
-                      <div className="flex flex-wrap gap-3 text-slate-500 text-xs mb-4">
-                        <span className="flex items-center gap-1">
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                          </svg>
-                          {exp.period}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          </svg>
-                          {exp.location}
-                        </span>
-                      </div>
-                      <ul className="space-y-1.5 mb-4">
-                        {exp.bullets.map((b, j) => (
-                          <li key={j} className="flex gap-2 text-slate-400 text-sm leading-relaxed">
-                            <span className="text-[#4f8ef7] mt-0.5 shrink-0">›</span>
-                            {b}
-                          </li>
-                        ))}
-                      </ul>
-                      <div className="flex flex-wrap gap-1.5">
-                        {exp.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className={`text-xs px-2.5 py-0.5 rounded-full border ${c.tag}`}
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                {/* Card */}
+                <div className="glass-card p-8 hover:-translate-y-1 transition-all duration-300">
+                  {/* Date */}
+                  <div className="text-[#0d9488] text-sm font-semibold mb-2">{exp.period}</div>
+
+                  {/* Role & Company */}
+                  <h3 className="font-heading font-bold text-white text-lg mb-1">{exp.role}</h3>
+                  <p className="text-[#ec4899] font-medium text-sm mb-4">{exp.company}</p>
+
+                  {/* Bullets */}
+                  <ul className="space-y-2 mb-5">
+                    {exp.bullets.map((b, j) => (
+                      <li key={j} className="flex gap-3 text-[#c4b5d4] text-sm leading-relaxed">
+                        <span className="text-[#0d9488] mt-0.5 shrink-0">–</span>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {exp.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-3 py-1 rounded-full bg-[rgba(13,148,136,0.06)] text-[#0d9488] border border-[rgba(13,148,136,0.2)]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-
-                  {/* Center Dot - desktop */}
-                  <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center w-5 h-5 z-10">
-                    <div
-                      className={`w-4 h-4 rounded-full ${c.dot} ring-4 ring-[#060912]`}
-                    />
-                  </div>
-
-                  {/* Mobile Dot */}
-                  <div className="lg:hidden absolute left-4 -translate-x-1/2 top-7 z-10">
-                    <div className={`w-3 h-3 rounded-full ${c.dot} ring-2 ring-[#060912]`} />
-                  </div>
-
-                  {/* Empty side spacer for desktop */}
-                  <div className="hidden lg:block w-[calc(50%-2.5rem)]" />
                 </div>
-              )
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </div>
