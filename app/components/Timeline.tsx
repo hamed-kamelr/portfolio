@@ -152,8 +152,6 @@ export default function Timeline() {
 
         {/* Timeline */}
         <div className="relative max-w-3xl mx-auto">
-          {/* Center line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#4f8ef7] via-[#d4a843] to-[#94a3b8]" />
 
           <div className="space-y-8">
             {experiences.map((exp, i) => {
@@ -164,11 +162,6 @@ export default function Timeline() {
                   className="reveal relative flex items-start gap-6"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  {/* Dot */}
-                  <div className="absolute left-1/2 -translate-x-1/2 top-7 z-10">
-                    <div className={`w-4 h-4 rounded-full ${c.dot} ring-4 ring-[#060912]`} />
-                  </div>
-
                   {/* Card */}
                   <div className="w-full pt-2">
                     <div
